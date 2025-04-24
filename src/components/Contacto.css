@@ -1,0 +1,27 @@
+.contacto {
+    padding: 20px;
+    background-color: #c5e1a5;
+    text-align: center;
+  }
+  
+  .contacto input, .contacto textarea {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+  }
+  
+  .contacto button {
+    padding: 10px;
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  section img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    max-height: 300px;
+    object-fit: cover;
+  }
