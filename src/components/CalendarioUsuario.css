@@ -1,0 +1,71 @@
+.calendario-usuario {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 280px;
+    background: rgba(255, 255, 255, 0.85); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque para fondo */
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Sombra elegante */
+    padding: 20px;
+    z-index: 1000;
+    text-align: center;
+  }
+  
+  /* Estilo para los días de la semana */
+  .react-calendar__month-view__weekdays {
+    font-weight: bold;
+    color: #333; /* Color oscuro pero suave */
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+  
+  /* Días del mes con dimensiones uniformes */
+  .react-calendar__tile {
+    height: 50px; /* Altura uniforme */
+    width: 50px;  /* Ancho uniforme */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+    background: #ffffff; /* Fondo claro */
+  }
+  
+  /* Día seleccionado */
+  .react-calendar__tile--active {
+    background: linear-gradient(to right, #4CAF50, #66BB6A); /* Efecto degradado */
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Día actual */
+  .react-calendar__tile--now {
+    background-color: #FFA726;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Días con turnos reservados */
+  .marcar-turno {
+    background: #2196F3; /* Azul claro para turnos reservados */
+    color: white;
+    border-radius: 6px;
+    padding: 4px;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  /* Efecto de hover */
+  .react-calendar__tile:hover {
+    background: #EEEEEE; /* Fondo gris claro */
+    transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+  }
+  
+  /* Días disponibles */
+  .react-calendar__tile--available {
+    background-color: #E3F2FD; /* Azul muy claro */
+    border: 1px solid #BBDEFB;
+  }
