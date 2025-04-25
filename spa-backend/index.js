@@ -39,7 +39,6 @@ app.use('/servicios', servicioRoutes(db));
 app.use('/turnos', turnoRoutes(db));
 app.use('/disponibilidad', disponibilidadRoutes(db));
 app.use('/consulta', consultasRoutes(db));
-
 // Inicialización del servidor
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

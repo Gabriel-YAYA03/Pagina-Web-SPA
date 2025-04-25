@@ -1,7 +1,9 @@
 
-const express = require('express');
-const router = express.Router();
 module.exports = (db) => {
+    const express = require('express');
+    const router = express.Router();
+
+    // Obtener todas las consultas
     router.get('/', (req, res) => {
         const query = 'SELECT * FROM consulta';
         db.query(query, (err, results) => {
@@ -14,6 +16,7 @@ module.exports = (db) => {
         });
     });
 
+    // Crear una nueva consulta
     router.post('/', (req, res) => {
         const { nombre, email, mensaje } = req.body;
         const query = 'INSERT INTO consulta (nombre, email, mensaje, estado) VALUES (?, ?, ?, "pendiente")';
@@ -27,6 +30,7 @@ module.exports = (db) => {
         });
     });
 
+    // Actualizar el estado de una consulta
     router.put('/:id', (req, res) => {
         const { id } = req.params;
         const { estado } = req.body;
@@ -45,6 +49,7 @@ module.exports = (db) => {
         });
     });
 
+    // Eliminar una consulta
     router.delete('/:id', (req, res) => {
         const { id } = req.params;
         const query = 'DELETE FROM consulta WHERE id_consulta = ?';
